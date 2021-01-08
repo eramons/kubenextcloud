@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nextcloud-ingress
+spec:
+  tls:
+  - hosts: 
+    - ${host.domain} 
+    secretName: nextcloud-tls 
+  rules:
+  - host: ${host.domain} 
+    http: 
+      paths: 
+        backend:
+          serviceName: nextcloud
+          servicePort: 80

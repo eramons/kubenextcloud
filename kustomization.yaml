@@ -1,0 +1,25 @@
+resources: 
+
+# Clusterissuer for certmanager
+- letsencrypt-prod.yaml
+
+# Ingress
+- nextcloud-ingress.yaml
+
+# Persistent volume claims
+- mariadb-pvc.yaml
+- nextcloud-pvc.yaml
+
+# Services
+- mariadb-service.yaml
+- nextcloud-service.yaml
+
+# Secrets
+- mariadb-secrets.yaml
+
+# Deployments
+- mariadb-deployment.yaml
+- nextcloud-deployment.yaml
+
+
+
