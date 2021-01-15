@@ -15,6 +15,7 @@ spec:
   - host: ${host.domain} 
     http: 
       paths: 
+      - path: /
         backend:
           serviceName: nextcloud
           servicePort: 80
